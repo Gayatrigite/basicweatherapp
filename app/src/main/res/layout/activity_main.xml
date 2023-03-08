@@ -6,14 +6,30 @@
     android:layout_height="match_parent"
     android:background="@drawable/img"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+            app:titleTextColor="@android:color/black"
+            app:title="Weather App" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:layout_width="291dp"
         android:layout_height="93dp"
         android:layout_gravity="center"
         android:text="Weather Update"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="40sp" />
 

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -28,15 +29,19 @@ public class MainActivity extends AppCompatActivity {
     TextView tvResult;
     private final String url = "https://api.openweathermap.org/data/2.5/weather";
     private final String appid = "92c0410c0e6e4f3a5ea70c5b8923cc5f";
+    private Toolbar mToolbar;
+
     DecimalFormat df = new DecimalFormat("#.##");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = findViewById(R.id.toolbar);
         etCity = findViewById(R.id.etCity);
         etCountry = findViewById(R.id.etCountry);
         tvResult = findViewById(R.id.tvResult);
     }
+
 
     public void getWeatherDetails(View view) {
         String tempUrl = "";
